@@ -1,0 +1,12 @@
+﻿@model ExamDotNetMVC.Models.UserDetail
+@{
+    ViewBag.Title = "Final";
+    int a = int.Parse(ViewBag.AMarks.ToString());
+    string name = ViewBag.Name.ToString();
+}
+
+<div class="container" style="background-color:white;padding: 21px;box-shadow: 2px 2px 21px gray;border-left: 4px solid #008080">
+    <h2>Hello <b style='color: blue; '>@name</b></h2>, <h3>you have scored <b style='color: green; '>@a</b> marks.</h3>
+</div>
+
+

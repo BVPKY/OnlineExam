@@ -1,0 +1,36 @@
+﻿@model ExamDotNetMVC.Models.ExamDetail
+
+@{
+    ViewBag.Title = "ExamDetails";
+    ViewBag.time = DateTime.Now.AddMinutes(20);
+}
+<style>
+    .fontStyle{
+        font-family: calibri;
+        font-size: 15px;
+    }
+</style>
+
+<div class="container" style="box-shadow: 1px 1px 21px gray;padding: 15px;border-radius: 5px;background-color: #f1f1f1">
+    <div style="padding: 10px;height: 650px;overflow-y: auto;background-color: white;border-left:4px solid #337ab7">
+        <h3><b>Hello Mr.@ViewBag.Name</b></h3>
+        <br/>
+        <br/>
+        <h3><b>Read the following Instructions</b></h3>
+        <ol>
+            <li style="font-size: 21px"><p>If you click on the Start Exam tab you will be redirected to Exam Page.</p></li>
+            <li style="font-size: 21px"><p>The Time for the Exam is 20 Minutes,After 20 Minutes Exam will be automatically submitted.</p></li>
+            <li style="font-size: 21px"><p>Save answer before going to next question or previous question.</p></li>            
+            <li style="font-size: 21px"><p>Save your answers before submitting or exiting the test.</p></li>           
+            <li style="font-size: 21px"><p>While writing the Exam if you Click on Exit Exam Button the Exam will be Submitted.</p></li>            
+            <li style="font-size: 21px"><p>If you visit other websites or open other tabs or refresh the page the Exam will be submitted automatically.</p></li>
+            <li style="font-size: 21px"><p>Marks For each Question will differ.</p></li>
+            <li style="font-size: 21px"><p>Mobile Phones or other Electronic Gadgets are strictly prohibited.</p></li>
+        </ol>   
+    </div><br/>
+    @Html.ActionLink("Start Exam", "Edit1", new { id = Model.Id }, new {@class="col-md-offset-11 btn btn-primary",onclick = "LoginRequired()" })
+</div>
+
+
+   
+
